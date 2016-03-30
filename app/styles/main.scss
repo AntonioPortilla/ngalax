@@ -1,93 +1,277 @@
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import 'media.scss';
 
-// bower:scss
-@import "bootstrap-sass/assets/stylesheets/bootstrap.scss";
-// endbower
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+/*Agignando Variables Globales*/
+@font-face {
+	font-family: 'gothic';
+	src: url("../fonts/gothic/gothic.eot");
+	src: local('gothic'), url("../fonts/gothic/gothic.woff") format('woff'), url("../fonts/gothic/gothic.ttf") format('truetype');
 }
 
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+body{
+	font-family: $font_family, Helvetica, Arial, sans-serif !important;
+	font-size: 14px;
+	color: $color_negro;
+	background-color: $color_blanco;
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
+	.os-extrabold{
+		font-family: 'Open Sans Extrabold';
+	}
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
+	.slideShow{
+		background-image: url('../images/bg-ngalax.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		p{
+			font-size: 1.3em;
+			color: $color_blanco;
+			text-align: center;
+		}
+	}
 
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
+	.eye {
+		background: $color_blanco_oscuro;
+		p {
+			font-size: 1em;
+		}
+		h2{
+			&:before{
+				background: url('../images/li.png');
+				border-bottom: 0 solid transparent;
+				border-top: 12px solid transparent;
+				content: '';
+				height: 0;
+				position: absolute;
+				top: 26px;
+				width: 12px;
+				z-index: 999;
+			}
+		}
+		h3{
+			font-weight: bold !important;
+		}
+	}
+	.connect{
+		background: url('../images/connect.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 50px 0;
+		h3{
+			color: $color_blanco;
+			font-weight: bold;
+			text-align: center;
+		}
+		img{
+			display: block;
+			margin: auto;
+		}
+		p{
+			color: $color_blanco;
+			text-align: justify;
+		}
+	}
+	.segurity{
+		background: $color_blanco_oscuro;
+		h2{
+			padding: 20px;
+			text-align: center;
+			span{
+				color: $color_negro;
+			}
+		}
+	}
+	.preventive{
+		background: url('../images/bg-connect.png');
+	}
+	.business{
+		background: url('../images/partners.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		h3{
+			color: $color_rojo;
+			font-size: 3.5em;
+			font-weight: bold;
+			text-align: center;
+			margin-top: 100px;
+			span{
+				color: $color_negro;
+			}
+		}
+		p{
+			font-size: 1.2em;
+			text-align: center;
+		}
+		a{
+			display: table;
+			margin: auto;
+			margin-top: 120px;
+			margin-bottom: 70px;
+		}
+	}
+	.btn-orange{
+		background: $color_rojo;
+		border: 0;
+		box-shadow: inset 0 -3px rgba(0,0,0,.5);
+		color: $color_blanco;
+		&:hover{
+			-moz-box-shadow: inset 0 -.2em rgba(0,0,0,.3);
+			-ms-box-shadow: inset 0 -.2em rgba(0,0,0,.3);
+			-o-box-shadow: inset 0 -.2em rgba(0,0,0,.3);
+			-webkit-box-shadow: inset 0 -.2em rgba(0,0,0,.3);
+			background: $color_naranja_oscuro none repeat scroll 0% 0%;
+			box-shadow: inset 0 -.2em rgba(0,0,0,.3);
+			color: $color_blanco_oscuro !important;
+		}
+	}
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
+	.semantic-content:target{
+		background: rgba(255,113,38, .5);
+	}
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
+	iframe{
+		border:   none !important;
+		bottom:   0 !important;
+		height:   0 !important;
+		margin:   0 !important;
+		padding:  0 !important;
+		top:    0 !important;
+	}
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
+	p, li{
+		color: $color_negro;
+		font-size: 1em;
+	}
+	h1 {
+		color: $color_rojo !important;
+		font-size: 5em;
+		text-align: center;
+		padding: 45px 0;
+	}
+	h2{
+		font-size: 2em;
+		color: $color_rojo;
+	}
+	h3{
+		font-size: 1.2em;
+	}
+	a {
+		text-decoration: none;
+		&:hover {
+			color: $color_rojo;
+			text-decoration: underline;
+		}
+		&:active{
+			color: yellowgreen
+		}
+		&:visited{
+			color: $color_blanco
+		}
+	}
+	ul li {
+		list-style-type: none;
+	}
+	header, section, footer{
+		width: 100%;
+		*display: block;
+	}
+	/*menu*/
+	.overlay {
+		background: rgba(0, 0, 0, .8);
+		bottom: 0;
+		height: 100%;
+		left: 0;
+		margin-top: 0;
+		padding: 0;
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 100%;
+		z-index: 1000;
+	}
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
-}
+	footer {
+		background: $color_gris_oscuro;
+		padding: 30px 0;
+		text-align: center;
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+		ul{
+			padding-left: 0;
+			&>li>a{
+				color: $color_blanco;
+				font-size: .8em;
+			}
+		}
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
+		blockquote{
+			border-left: 0;
+			color: $color_blanco;
+			font-size: .8em;
+			padding: 10px;
+		}
+	}
+	//popup registro
+	.formSuscribir {
+		background: $color_blanco_oscu2;
+		border-radius: 15px;
+		padding: 30px 40px;
+	}
 
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
+	.titulo_form {
+		color: $color_gris_oscuro;
+		font-size: 1.8em;
+		text-align: center;
+	}
 
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+	.info_free {
+		color: $color_gris_oscuro;
+		font-size: 0.8em;
+		margin-top: 10px;
+	}
+
+	.frmGalax input[type="text"],
+	.frmGalax input[type="email"],
+	.frmGalax select {
+		background: $color_blanco_oscuro;
+		border-radius: 10px;
+		border: 1px solid $color_gris;
+		color: $color_gris_oscuro;
+		display: block;
+		margin: auto;
+		padding: 12px;
+		width: 95%;
+	}
+
+	.frmGalax input[type="text"]:focus,
+	.frmGalax input[type="email"]:focus,
+	.frmGalax select:focus {
+		color: $color_rojo;
+		font-family: 'Open Sans Bold';
+	}
+
+	.btn-rojo, input[type="submit"].v2c_btn_submit {
+		-moz-border-radius: 6px;
+		-ms-border-radius: 6px;
+		-o-border-radius: 6px;
+		-webkit-border-radius: 6px;
+		background: $color_rojo;
+		border-radius: 6px;
+		border: 0;
+		color: $color_blanco;
+		cursor: pointer;
+		font: 1.4em 'Open Sans Bold';
+		margin-top: 20px;
+		padding: 10px 35px;
+		width: 100%;
+
+		&:hover{
+			-moz-box-shadow: inset 0 -.2em rgba(0,0,0,.3);
+			-ms-box-shadow: inset 0 -.2em rgba(0,0,0,.3);
+			-o-box-shadow: inset 0 -.2em rgba(0,0,0,.3);
+			-webkit-box-shadow: inset 0 -.2em rgba(0,0,0,.3);
+			background: $color_naranja_oscuro none repeat scroll 0% 0%;
+			box-shadow: inset 0 -.2em rgba(0,0,0,.3);
+			color: $color_blanco_oscuro !important;
+		}
+	}
 }

@@ -1,0 +1,316 @@
+@import "variables";
+/* Responsive: Portrait tablets and up */
+@media(max-width:480px){
+	header{
+		figure{
+			img{
+				display: block;
+				margin: auto;
+			}
+		}
+	}
+	.slideShow{
+		background-image: url('../images/bg-nglax-small.jpg') !important;
+
+		a.btn{
+			display: block;
+		}
+	}
+	.connect{
+		padding: 30px 0 !important;
+	}
+	.preventive img{
+		width: 100%;
+		padding-bottom: 20px;
+	}
+	.ethic{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	h1{
+		font-size: 2em !important;
+	}
+
+	footer {
+		text-align: center;
+
+		blockquote {
+			border: 0 !important;
+		}
+	}
+
+	.titulo_form{
+		font-size: 1.2em !important;
+	}
+
+	.info_free{
+		text-align: center;
+	}
+
+	.formSuscribir {
+		padding: 25px 20px !important;
+	}
+
+	.formKumbao {
+		label{
+			display: none;
+		}
+
+		input[type=text],
+		input[type=email],
+		select{
+			margin-top:10px !important;
+			padding: 5px 10px !important;
+			width: 100% !important;
+		}
+	}
+	//ventana cerrar del modal en celular
+	.semantic-content:before{
+		background: transparent !important;
+	}
+
+	.semantic-content .modal-close:after{
+		background: $color_blanco;
+		border-radius: 50%;
+		color: $color_rojo;
+		font-family: 'Open Sans Extrabold';
+		left: initial !important;
+		margin-left: 0 !important;
+		padding: .2em .5em !important;
+		right: 5px !important;
+		top: 3.2em !important;
+	}
+
+	.btn-rojo,
+	input[type="submit"].v2c_btn_submit{
+		font-size: 1.2em !important;
+		margin-top: 15px !important;
+		padding: 8px 0px !important;
+	}
+
+	.ebook{
+		background: $color_blanco !important;
+		padding-bottom: 40px !important;
+
+		.row div:last-child img{
+			margin-top: 25px;
+		}
+
+		a.btn{
+			display: table;
+			margin: auto;
+		}
+	}
+
+	.classTV{
+		margin-bottom: 40px;
+	}
+
+	.marketing{
+		margin-top: 0 !important;
+	}
+
+	#v2c_api_chat, #conversejs{
+		display: none !important;
+	}
+
+}
+
+@media(min-width: 481px){
+	h1{
+		margin-top: 130px;
+	}
+	.btn-orange{
+		padding: 15px 85px !important;
+	}
+	.slideShow{
+		padding-bottom: 100px;
+	}
+	.connect{
+		h3, p{
+			padding: 0 25%;
+		}
+	}
+	.preventive img{
+		left: 10%;
+		margin-top: -42px;
+		position: absolute;
+		z-index: 1000;
+	}
+	.ethic{
+		padding: 30px 0;
+	}
+	.business{
+		p{
+			padding: 0 125px;
+			margin: 35px 0;
+		}
+	}
+	.eye{
+		h2{
+			margin-left: -24px;
+		}
+	}
+}
+
+@media (max-width: 767px){
+	.phrase{
+		&:before{
+			background: none !important;
+		}
+
+		 &:after{
+		 	background: none !important;
+		 }
+
+		 h2{
+		 	text-align: center !important;
+		 }
+
+		 a.btn{
+			background: $color_blanco_oscuro !important;
+			display: block;
+			margin: auto;
+		 }
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		max-width: 730px;
+	}
+
+	.classTV{
+		display: block;
+		margin: auto;
+		position: relative;
+		width: 80%;
+	}
+
+	.tv h4:after{
+		top: 0px;
+	}
+
+	.ebook a{
+		margin-top: 40px;
+	}
+}
+
+@media (min-width: 768px)and(max-width: 991px){
+	.phrase{
+		height: 100px;
+
+		&:after{
+			margin-top: -96px;
+		}
+
+		h2{
+			font-size: .9em !important;
+			position: relative;
+			z-index: 1000;
+		}
+
+		a.btn{
+			position: relative;
+			z-index: 1000;
+		}
+	}
+}
+
+@media(min-width: 992px){
+	.ebook{
+		.row div:last-child{
+			position: inherit;
+
+			img{
+				float: right;
+				margin-top: -20px;
+				position: absolute;
+				right: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px)and(max-width: 1199px){
+	.jumbotron p{
+		padding: 20px 0 !important;
+	}
+
+	.phrase{
+		height: 100px;
+
+		&:after{
+			margin-top: -97px;
+		}
+
+		h2{
+			font-size: 1em !important;
+			text-align: center !important;
+		}
+	}
+
+	.tv{
+		h4{
+			margin-top: 40px !important;
+		}
+
+		p{
+			margin-bottom: 80px;
+		}
+
+		img{
+			margin-top: 25px;
+		}
+	}
+
+	.genius{
+		padding-bottom: 0 !important;
+
+		p{
+			margin-top: 40px !important;
+			width: 100%;
+		}
+
+		.row div:last-child{
+			position: relative !important;
+		}
+
+		img{
+			display: block;
+			float: initial !important;
+			height: auto;
+			margin: auto;
+			position: relative !important;
+			right: initial !important;
+			width: 100%;
+		}
+	}
+
+	.ebook{
+		padding-bottom: 40px !important;
+
+		a.btn{
+			display: table;
+			margin: auto;
+		}
+
+		.row div:last-child{
+			position: relative !important;
+		}
+
+		img{
+			float: initial !important;
+			position: relative !important;
+			right: initial !important;
+			margin: auto !important;
+			display: block;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.container{
+		max-width: 1062px;
+	}
+}

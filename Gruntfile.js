@@ -297,6 +297,30 @@ module.exports = function (grunt) {
         }]
       }
     },
+    cssmin: {
+      dist: {
+        files: {
+          '<%= config.dist %>/styles/main.min.css': [
+            '<%= config.app %>/styles/sabecarousel.css',
+            //'bower_components/animate-css/animate.min.css',
+            '<%= config.app %>/styles/modal.css',
+            '.tmp/styles/main.css'
+          ]
+        }
+      }
+    },
+    uglify: {
+      dist: {
+        files: {
+          '<%= config.dist %>/scripts/main.min.js':
+          [
+          	'bower_components/jquery/dist/jquery.min.js',
+          	'<%= config.app %>/scripts/jquery.sabecarousel.js',
+          	'.tmp/scripts/main.js'
+          ]
+        }
+      }
+    },
 
     // By default, your `index.html`'s <!-- Usemin block --> will take care
     // of minification. These next options are pre-configured if you do not
@@ -320,9 +344,9 @@ module.exports = function (grunt) {
     //     }
     //   }
     // },
-    // concat: {
-    //   dist: {}
-    // },
+    concat: {
+      dist: {}
+    },
 
     // Copies remaining files to places other tasks can use
     copy: {
@@ -377,7 +401,7 @@ module.exports = function (grunt) {
       dist: [
         'babel',
         'sass',
-        'imagemin',
+        //'imagemin',
         'svgmin'
       ]
     }
