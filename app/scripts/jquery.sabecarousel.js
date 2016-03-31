@@ -78,7 +78,7 @@
             viewportSize     = $viewport[0]["offset" + sizeLabel];
             slideSize        = $slides.first()["outer" + sizeLabel](true);
             self.slidesTotal = $slides.length;
-            slideCurrent     = self.options.start || 0;
+            //slideCurrent     = self.options.start || 0;
             slidesVisible    = Math.ceil(viewportSize / slideSize);
 
             $overview.append($slides.slice(0, slidesVisible).clone().addClass("mirrored"));
