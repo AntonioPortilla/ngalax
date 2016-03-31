@@ -314,8 +314,8 @@ module.exports = function (grunt) {
         files: {
           '<%= config.dist %>/scripts/main.min.js':
           [
-          	'bower_components/jquery/dist/jquery.min.js',
-          	'<%= config.app %>/scripts/jquery.sabecarousel.js',
+          	//'bower_components/jquery/dist/jquery.min.js',
+          	//'<%= config.app %>/scripts/jquery.sabecarousel.js',
           	'.tmp/scripts/main.js'
           ]
         }
@@ -366,7 +366,10 @@ module.exports = function (grunt) {
           expand: true,
           dot: true,
           cwd: '.',
-          src: 'bower_components/bootstrap-sass/assets/fonts/bootstrap/*',
+          src: [
+          		'bower_components/bootstrap-sass/assets/fonts/bootstrap/*',
+          		'bower_components/jquery/dist/jquery.min.js'
+          		],
           dest: '<%= config.dist %>'
         }]
       }
